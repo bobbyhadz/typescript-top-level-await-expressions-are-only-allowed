@@ -12,16 +12,22 @@ To be able to run the code, follow these instructions:
 npm install
 ```
 
-4. To run the code, issue the `npm start` command.
+4. To run the code, issue the following command.
 
 ```bash:shell
-npm start
+npx tsc && node build/index.js
 ```
 
-Alternatively, you can run the TypeScript project in watch mode, so that the TypeScript server is restarted every time you make a change and save.
+The output file is located under `build/index.js` as indicated in the command.
+
+5. Alternatively, you can use the [esrun package](https://www.npmjs.com/package/esrun) as shown toward the end of the article.
 
 ```bash:shell
-npm run dev
+npx esrun src/index.ts
 ```
 
-The `npm run dev` command uses `nodemon` to watch for changes and restarts your TypeScript project every time you save (Ctrl + S).
+Or run the command in watch mode.
+
+```bash:shell
+npx esrun --watch src/index.ts
+```
